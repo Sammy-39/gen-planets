@@ -1,13 +1,55 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.app{
+    @apply container mx-auto mt-5;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.home{
+    @apply flex flex-col items-center mb-6;
+}
+
+.gen-input-form{
+    @apply flex flex-col px-4 pt-6 mb-6 mt-24 w-96;
+}
+
+.gen-input-con{
+    @apply mb-4;
+}
+
+.gen-input{
+    @apply shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight;
+}
+
+.gen-input:focus{
+    @apply outline-none;
+}
+
+.gen-btn{
+    @apply bg-blue-500 text-white font-bold py-2 px-4 rounded;
+}
+
+.gen-btn:hover{
+    @apply bg-blue-700;
+}
+
+.planets-list{
+    @apply flex flex-col w-96 mb-4 cursor-pointer;
+}
+
+.download-btn{
+    @apply bg-green-500 text-white font-bold py-2 px-4 rounded;
+}
+
+.download-btn:hover{
+    @apply bg-green-700;
+}
+
+.no-data{
+    @apply flex flex-col items-center;
+}
+
+.no-data-img{
+    @apply w-4/5 h-72 mb-2.5 object-cover;
 }
